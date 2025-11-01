@@ -27,7 +27,7 @@ if [ "$1" != "--batch" ]; then
     fi
 
     echo "OCR processing: $INPUT"
-    "$OCRMYPDF" --language dan --image-dpi 600 --clean --skip-text --deskew --invalidate-digital-signatures "$INPUT" "$OUTPUT"
+    "$OCRMYPDF" --language dan --image-dpi 600 --clean --force-ocr --deskew --invalidate-digital-signatures "$INPUT" "$OUTPUT"
     echo "✓ Done: $OUTPUT"
 
 # Batch processing
@@ -59,7 +59,7 @@ else
             echo "Processing: $(basename "$pdf")"
 
             # Try OCR without invalidating signatures
-            ERROR_OUTPUT=$("$OCRMYPDF" --language dan --image-dpi 600 --clean --skip-text --deskew "$pdf" "$output" 2>&1)
+            ERROR_OUTPUT=$("$OCRMYPDF" --language dan --image-dpi 600 --clean --force-ocr --deskew "$pdf" "$output" 2>&1)
 
             if [ $? -eq 0 ]; then
                 echo "✓ Done"
