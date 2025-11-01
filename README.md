@@ -7,6 +7,7 @@ I'm using it at work for financial statements etc.
 
 - Batch process multiple PDFs in a folder
 - Danish OCR (but has multi-language support for the cosmopolitans out there)
+- Re-OCRs PDFs even if they already have text (fixes corrupted text/encoding issues)
 - Automatically skips digitally signed PDFs so as to not void signatures
 - Removes original files after successful OCR (signed files are preserved)
 - Progress tracking in the terminal + clear error reporting
@@ -22,6 +23,7 @@ I'm using it at work for financial statements etc.
 
 - **Tesseract OCR** - The OCR engine
 - **ocrmypdf** - Python wrapper for Tesseract
+- **unpaper** - Image preprocessing tool (for cleaning scans)
 - **Python 3.7+** - Required for ocrmypdf
 
 ## Installation
@@ -30,7 +32,7 @@ I'm using it at work for financial statements etc.
 
 ```bash
 # Install dependencies
-sudo pacman -S tesseract tesseract-data-dan python-pipx
+sudo pacman -S tesseract tesseract-data-dan python-pipx unpaper
 
 # Install ocrmypdf
 pipx install ocrmypdf
@@ -46,7 +48,7 @@ chmod +x ocr_pdf.sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install dependencies
-brew install tesseract tesseract-lang
+brew install tesseract tesseract-lang unpaper
 
 # Install ocrmypdf
 pip3 install ocrmypdf
@@ -128,11 +130,11 @@ chmod +x ocr_pdf.sh
 ## Technical Details
 
 - Uses **Tesseract OCR** engine for text recognition
+- Processes at **600 DPI** for maximum accuracy on Danish characters (Å, ø, æ)
+- **Force re-OCRs all pages** - replaces existing text (even if already present) to fix corrupted text/encoding
+- Uses **unpaper** for image cleaning and noise removal
 - Processes locally on your machine (no internet required after installation)
-- OCR layer is added invisibly over original images
-- Original image quality is preserved
 - Supports deskewing for rotated scans
-- Output optimized for file size
 - All OCR processing happens **100% locally** on your machine. Your documents remain completely private.
 
 ## License
