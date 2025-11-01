@@ -27,7 +27,7 @@ if [ "$1" != "--batch" ]; then
     fi
 
     echo "OCR processing: $INPUT"
-    "$OCRMYPDF" --language dan --image-dpi 600 --clean --force-ocr --deskew --invalidate-digital-signatures "$INPUT" "$OUTPUT"
+    "$OCRMYPDF" --language dan --image-dpi 300 --clean --force-ocr --deskew --invalidate-digital-signatures "$INPUT" "$OUTPUT"
     echo "✓ Done: $OUTPUT"
 
 # Batch processing
@@ -57,26 +57,33 @@ else
             fi
 
             echo "Processing: $(basename "$pdf")"
+            echo ""
 
-            # Try OCR without invalidating signatures
-            ERROR_OUTPUT=$("$OCRMYPDF" --language dan --image-dpi 600 --clean --force-ocr --deskew "$pdf" "$output" 2>&1)
+            # Try OCR without invalidating signatures (show progress)
+            "$OCRMYPDF" --language dan --image-dpi 300 --clean --force-ocr --deskew "$pdf" "$output" 2>&1 | tee /tmp/ocr_output.log
+            EXIT_CODE=${PIPESTATUS[0]}
 
-            if [ $? -eq 0 ]; then
+            echo ""
+            if [ $EXIT_CODE -eq 0 ]; then
                 echo "✓ Done"
                 # Delete original file after successful OCR
                 rm "$pdf"
                 echo "  → Removed original file"
             else
                 # Check if error is due to digital signature
-                if echo "$ERROR_OUTPUT" | grep -q "DigitalSignatureError"; then
+                if grep -q "DigitalSignatureError" /tmp/ocr_output.log; then
                     echo "⊗ SKIPPED (digitally signed)"
                     SIGNED_FILES+=("$(basename "$pdf")")
                 else
                     echo "✗ Failed"
                 fi
             fi
+            echo ""
         fi
     done
+
+    # Clean up temp log
+    rm -f /tmp/ocr_output.log
 
     echo ""
     echo "Batch processing complete!"

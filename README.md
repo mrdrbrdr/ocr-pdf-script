@@ -130,7 +130,7 @@ chmod +x ocr_pdf.sh
 ## Technical Details
 
 - Uses **Tesseract OCR** engine for text recognition
-- Processes at **600 DPI** for maximum accuracy on Danish characters (Å, ø, æ)
+- Processes at **300 DPI** for good accuracy on Danish characters (Å, ø, æ)
 - **Force re-OCRs all pages** - replaces existing text (even if already present) to fix corrupted text/encoding
 - Uses **unpaper** for image cleaning and noise removal
 - Processes locally on your machine (no internet required after installation)

@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0] - 2025-11-01
+
+### Changed
+- **Reduced DPI from 600 to 300** for faster processing
+- **Added visible progress bars** to terminal output showing percentage and time estimates
+- Still maintains good accuracy for Danish characters
+
+### Technical Details
+- Processing is now approximately 2x faster
+- Progress bars show real-time status for each page
+- 300 DPI is still sufficient for quality OCR of printed documents
+
 ## [1.2.0] - 2025-11-01
 
 ### Fixed
