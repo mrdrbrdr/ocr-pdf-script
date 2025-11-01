@@ -59,7 +59,7 @@ chmod +x ocr_pdf.sh
 
 **Process all PDFs in a folder:**
 ```bash
-./ocr_pdf.sh --batch /path/to/your/pdfs/
+./ocr_pdf.sh --batch "/path/to/your/pdfs/"
 ```
 
 **Process a single PDF:**
