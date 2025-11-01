@@ -1,19 +1,22 @@
 # OCR PDF Script
 
-A bash script to add searchable text layers to scanned PDFs using OCR (Optical Character Recognition).
+So this is a little bash script to add searchable text layers to your PDFs using OCR.
+I'm using it at work for financial statements etc. 
 
 ## Features
 
-- 🔄 Batch process multiple PDFs in a folder
-- 🌍 Multi-language support (Danish, English, German, etc.)
-- 🔒 Automatically skips digitally signed PDFs to preserve signatures
-- 🗑️ Removes original files after successful OCR (signed files are preserved)
-- 📊 Progress tracking and clear error reporting
+- Batch process multiple PDFs in a folder
+- Danish OCR (but has multi-language support for the cosmopolitans out there)
+- Automatically skips digitally signed PDFs so as to not void signatures
+- Removes original files after successful OCR (signed files are preserved)
+- Progress tracking in the terminal + clear error reporting
 
 ## Supported Systems
 
 - **Arch Linux**
 - **macOS**
+- **Windows?** You're better than this. Install
+  [**Omarchy**](https://github.com/basecamp/omarchy) and when you've joined the promised land we'll pretend this never happened. 
 
 ## Requirements
 
@@ -80,12 +83,7 @@ chmod +x ocr_pdf.sh
 
 ## Language Support
 
-The script defaults to **Danish** (`dan`). To use a different language, edit `ocr_pdf.sh` and change `--language dan` to your preferred language:
-
-- English: `eng`
-- German: `deu`
-- Spanish: `spa`
-- French: `fra`
+The script defaults to **Danish** (`dan`). If you wanna use a different language, edit `ocr_pdf.sh` and change `--language dan` to your preferred language. The full list can be found in the link below...
 - [See full list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html)
 
 **Install the corresponding language data:**
@@ -135,10 +133,7 @@ chmod +x ocr_pdf.sh
 - Original image quality is preserved
 - Supports deskewing for rotated scans
 - Output optimized for file size
-
-## Privacy
-
-All OCR processing happens **100% locally** on your machine. No data is sent to external servers. Your documents remain completely private.
+- All OCR processing happens **100% locally** on your machine. Your documents remain completely private.
 
 ## License
 
@@ -146,4 +141,4 @@ MIT
 
 ## Contributing
 
-Issues and pull requests are welcome!
+Issues and pull requests are welcome! <3
