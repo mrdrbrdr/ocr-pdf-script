@@ -17,7 +17,7 @@ I'm using it at work for financial statements etc.
 - **Arch Linux**
 - **macOS**
 - **Windows?** You're better than this. Install
-  [**Omarchy**](https://github.com/basecamp/omarchy) and when you've joined the promised land we'll pretend this never happened. 
+  [**Omarchy**](https://github.com/basecamp/omarchy) rn. 
   ![8WK1](https://github.com/user-attachments/assets/5db903ec-3972-4bd4-ba08-7c7456e362bc)
 
     
