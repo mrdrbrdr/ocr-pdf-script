@@ -18,8 +18,9 @@ I'm using it at work for financial statements etc.
 - **macOS**
 - **Windows?** You're better than this. Install
   [**Omarchy**](https://github.com/basecamp/omarchy) and when you've joined the promised land we'll pretend this never happened. 
-  <iframe src="https://gifer.com/embed/8WK1" width=480 height=261.333 frameBorder="0" allowFullScreen></iframe><p><a href="https://gifer.com">via GIFER</a></p>
-  
+  ![8WK1](https://github.com/user-attachments/assets/5db903ec-3972-4bd4-ba08-7c7456e362bc)
+
+    
 ## Requirements
 
 - **Tesseract OCR** - The OCR engine
