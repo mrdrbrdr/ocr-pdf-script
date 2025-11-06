@@ -18,6 +18,7 @@ I'm using it at work for financial statements etc.
 - **macOS**
 - **Windows?** You're better than this. Install
   [**Omarchy**](https://github.com/basecamp/omarchy) and when you've joined the promised land we'll pretend this never happened. 
+  <img width="360" height="196" alt="image" src="https://github.com/user-attachments/assets/0a496e44-9a1e-4145-86f5-b0ec17a25131" />
 
 ## Requirements
 
