@@ -18,8 +18,6 @@ I'm using it at work for financial statements etc.
 - **macOS**
 - **Windows?** You're better than this. Install
   [**Omarchy**](https://github.com/basecamp/omarchy) rn.
-   
-  ![8WK1](https://github.com/user-attachments/assets/5db903ec-3972-4bd4-ba08-7c7456e362bc)
 
     
 ## Requirements
