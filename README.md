@@ -16,8 +16,8 @@ I'm using it at work for financial statements etc.
 
 - **Arch Linux**
 - **macOS**
-- **Windows?** You're better than this. Install
-  [**Omarchy**](https://github.com/basecamp/omarchy) rn.
+- **Windows?** < [**Omarchy**](https://github.com/basecamp/omarchy) 
+![aby04w](https://github.com/user-attachments/assets/ae800e4a-4b97-4321-a4b5-207e04618b33)
 
     
 ## Requirements
