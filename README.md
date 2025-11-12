@@ -18,9 +18,8 @@ I'm using it at work for financial statements etc.
 - **macOS**
 - **Windows?** < [**Omarchy**](https://github.com/basecamp/omarchy)
   
-<img width="386" height="386" alt="image" src="https://github.com/user-attachments/assets/a103001d-55e5-4fd1-85ca-c29ac2de0f55" />
+ <img width="390" height="389" alt="image" src="https://github.com/user-attachments/assets/ee422e0d-094b-40e9-90ec-e60d4cff970a" />
 
-    
 ## Requirements
 
 - **Tesseract OCR** - The OCR engine
